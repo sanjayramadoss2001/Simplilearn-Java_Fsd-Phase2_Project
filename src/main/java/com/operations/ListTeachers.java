@@ -13,10 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
-import com.details.StudentDetails;
+import com.details.TeacherDetails;
 import com.util.Util;
 
-@WebServlet("/liststudents")
+@WebServlet("/list-teachers")
 public class ListTeachers extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -29,9 +29,9 @@ public class ListTeachers extends HttpServlet {
 			
 			Session session = factory.openSession();
 			
-			List<StudentDetails> list = session.createQuery("from StudentDetails").list();
+			List<TeacherDetails> list = session.createQuery("from TeacherDetails").list();
 			
-			out.println("<h2>Students List");
+			out.println("<h2>Teacher List");
 			
 			out.println("<style> table,td,th{"
 					+ "border:2px solid red; "
@@ -39,18 +39,18 @@ public class ListTeachers extends HttpServlet {
 					+ "</style>");
 			out.println("<table>");
 			out.println("<tr>");
-			out.println("<th>S.No</th>");
-			out.println("<th>Student Name</th>");
-			out.println("<th>Student RollNo</th>");
-			out.println("<th>Student Class</th>");
+			out.println("<th>Teacher Id</th>");
+			out.println("<th>Teacher Name</th>");
+			out.println("<th>Teacher Subject</th>");
+			out.println("<th>Teacher Class</th>");
 			out.println("<tr>");
 			
-			for(StudentDetails stdet : list) {
+			for(TeacherDetails tedet : list) {
 				out.println("<tr>");
-				out.println("<td>"+ stdet.getId() +"</td>");
-				out.println("<td>"+ stdet.getName() +"</td>");
-				out.println("<td>"+ stdet.getRollNo() +"</td>");
-				out.println("<td>"+ stdet.getStudentClass() +"</td>");
+				out.println("<td>"+ tedet.getId() +"</td>");
+				out.println("<td>"+ tedet.getName() +"</td>");
+				out.println("<td>"+ tedet.getSubject() +"</td>");
+				out.println("<td>"+ tedet.getTeacherClass() +"</td>");
 				out.println("</tr>");
 			}
 			out.println("</table>");

@@ -41,7 +41,7 @@ public class ListClasses extends HttpServlet {
 					+ "</style>");
 			out.println("<table>");
 			out.println("<tr>");
-			out.println("<th>S.No</th>");
+			out.println("<th>Class Id</th>");
 			out.println("<th>Class Name</th>");
 			out.println("<th>Section</th>");
 			out.println("<th>Room No</th>");

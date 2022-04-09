@@ -40,7 +40,7 @@ public class ListStudents extends HttpServlet {
 					+ "</style>");
 			out.println("<table>");
 			out.println("<tr>");
-			out.println("<th>S.No</th>");
+			out.println("<th>Student Id</th>");
 			out.println("<th>Teacher Name</th>");
 			out.println("<th>Teacher Subject</th>");
 			out.println("<th>Teacher Class</th>");

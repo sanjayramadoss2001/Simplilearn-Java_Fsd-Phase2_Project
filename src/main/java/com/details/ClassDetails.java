@@ -14,7 +14,7 @@ public class ClassDetails {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="Id")
+	@Column(name="ClassId")
 	private int Id;
 	@Column(name="Class")
 	private String ClassName;

@@ -13,7 +13,7 @@ import javax.persistence.Table;
 public class SubjectDetails {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="Id")
+	@Column(name="SubjectId")
 	private int Id;
 	@Column(name="Subject_Name")
 	private String SubjectName;

@@ -42,7 +42,7 @@ public class ListSubjects extends HttpServlet {
 					+ "</style>");
 			out.println("<table>");
 			out.println("<tr>");
-			out.println("<th>S.No</th>");
+			out.println("<th>Subject Id</th>");
 			out.println("<th>Subject Name</th>");
 			out.println("<th>Subject Code</th>");
 			out.println("<th>Subject Teacher</th>");
